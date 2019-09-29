@@ -15,6 +15,7 @@ exports.info = {
     'colorShiny': 'Same here',
     'evolvesFrom': { species: 'PokemonName', level: null, triggeredBy: 'Item Use (Thunderstone)' },
     'evolvesTo': { species: 'PokemonName', level: '0', triggeredBy: 'Levelling Up' }, // If you need help with this, ask. I can correct you also if you're unsure.
+    'evolvesTo2': { species: 'PokemonName', level: '0', triggeredBy: 'Levelling Up' }, // This is for Pokemon such as Gloom with 2 evolutions
     'eggGroups': ['Egg', 'Group'],
     'hatchTime': '100 - 1000 steps',
     'gif': 'http://play.pokemonshowdown.com/sprites/xyani/pokemonName.gif', // Click on the URL to check once you replace

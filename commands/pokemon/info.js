@@ -144,7 +144,7 @@ class InfoCommand extends Command {
         const genRatio = `Male: ${pokemonObject.genderRatio.M * 100}%\nFemale: ${pokemonObject.genderRatio.F * 100}%`;
 
         if (pokemonObject.genderRatio.M == 0 || pokemonObject.genderRatio.M == 0.00 || pokemonObject.genderRatio.F == 0 || pokemonObject.genderRatio.F == 0.00) {
-            pokemonInfoEmbed.addField('Gender Ratio', 'This Pokemon is genderless', true); // Genderless
+            pokemonInfoEmbed.addField('Gender Ratio', 'Genderless', true); // Genderless
         } else pokemonInfoEmbed.addField('Gender Ratio', genRatio, true); // Normal Gender ratio
 
         // Adding catch rate
@@ -200,7 +200,7 @@ class InfoCommand extends Command {
         pokemonInfoEmbed.addField('Base Stats', `HP: ${pokemonObject.baseStats.hp}\nATK: ${pokemonObject.baseStats.atk}\nDEF: ${pokemonObject.baseStats.def}\nSP. ATK: ${pokemonObject.baseStats.spAtk}\nSP. DEF: ${pokemonObject.baseStats.spDef}\nSPD: ${pokemonObject.baseStats.spd}`);
 
         // Adding evolutions
-        let [evolvesFrom, evolvesTo] = [{}, {}];
+        let [evolvesFrom, evolvesTo, evolvesTo2] = [{}, {}, {}];
 
         if (pokemonObject.evolvesFrom) {
             evolvesFrom = {
@@ -227,6 +227,20 @@ class InfoCommand extends Command {
                 pokemonInfoEmbed.addField('Evolves To', `**${evolvesTo.species}**\nTriggered By: ${evolvesTo.triggeredBy}`, true);
             } else {
                 pokemonInfoEmbed.addField('Evolves To', `**${evolvesTo.species}** @ LVL ${evolvesTo.level}`, true);
+            }
+        }
+
+        if (pokemonObject.evolvesTo2) {
+            evolvesTo2 = {
+                species: pokemonObject.evolvesTo2.species,
+                level: pokemonObject.evolvesTo2.level,
+                triggeredBy: pokemonObject.evolvesTo2.triggeredBy
+            };
+
+            if (evolvesTo2.level == null) {
+                pokemonInfoEmbed.addField('Evolves To (alternate evolution)', `**${evolvesTo2.species}**\nTriggered By: ${evolvesTo2.triggeredBy}`, true);
+            } else {
+                pokemonInfoEmbed.addField('Evolves To (alternate evolution)', `**${evolvesTo2.species}** @ LVL ${evolvesTo2.level}`, true);
             }
         }
 
