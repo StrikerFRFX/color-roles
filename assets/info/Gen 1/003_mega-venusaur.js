@@ -1,6 +1,6 @@
 exports.info = {
     'number': 3,
-    'species': '**Mega Venusaur** (**メガフシギバナ** *Mega Fushigibana*)',
+    'species': '**Mega Venusaur** (**メガ・フシギバナ** *Mega Fushigibana*)',
     'types' : 'Grass | Poison',
     'pokedexEntry': 'In order to support its flower, which has grown larger due to Mega Evolution, its back and legs have become stronger.\n\n*Dex entry from LGP/LGE*',
     'genderRatio': { M: 0.875, F: 0.125 },

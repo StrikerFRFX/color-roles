@@ -1,6 +1,6 @@
 exports.info = {
     'number': 115,
-    'species': '**Mega Kangaskhan** (**メガガルーラ** *Mega Garura*)',
+    'species': '**Mega Kangaskhan** (**メガ・ガルーラ** *Mega Garura*)',
     'types' : 'Normal',
     'pokedexEntry': 'The explosive energy the child is bathed in causes temporary growth. The mother is beside herself with worry about it. When the mother sees the back of her Mega-Evolved child, it makes her think of the day when her child will inevitably leave her.\n\n*Dex entry from USUM*',
     'genderRatio': { M: 0.000, F: 1.000 },

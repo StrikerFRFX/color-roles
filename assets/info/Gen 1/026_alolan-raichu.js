@@ -1,6 +1,6 @@
 exports.info = {
     'number': 26,
-    'species': '**Alolan Raichu** (**アローラライチュウ** **Alola Raichuu**)',
+    'species': '**Alolan Raichu** (**アローラ・ライチュウ** **Alola Raichuu**)',
     'types' : 'Electric | Psychic',
     'pokedexEntry': 'It focuses psychic energy into its tail and rides it like it\'s surfing. Another name for this Pokémon is “hodad.” When you rub its cheeks, a sweet fragrance comes wafting out. However, you\'ll also get a light shock!\n\n*Dex entry from USUM*',
     'genderRatio': { M: 0.5, F: 0.5 },

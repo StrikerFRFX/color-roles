@@ -1,6 +1,6 @@
 exports.info = {
     'number': 15,
-    'species': '**Mega Beedrill** (**メガスピアー** *Mega Supiaa*)',
+    'species': '**Mega Beedrill** (**メガ・スピアー** *Mega Supiaa*)',
     'types' : 'Bug | Poison',
     'pokedexEntry': 'Its legs have become poison stingers. It stabs its prey repeatedly with the stingers on its limbs, dealing the final blow with the stinger on its rear.n\n*Dex entry from LGP/LGE*',
     'genderRatio': { M: 0.5, F: 0.5 },

@@ -1,6 +1,6 @@
 exports.info = {
     'number': 37,
-    'species': '**Alolan Vulpix** (**アローラロコン** *Alola Rokon*)',
+    'species': '**Alolan Vulpix** (**アローラ・ロコン** *Alola Rokon*)',
     'types': 'Ice',
     'pokedexEntry': 'If you carelessly approach it because it\'s cute, the boss of the pack, Ninetales, will appear and freeze you. They live together in a skulk, helping one another. Before eating their prey, they freeze it solid with their –58 degree Fahrenheit breath.\n\n*Dex entry from USUM*',
     'genderRatio': { M: 0.25, F: 0.75 },

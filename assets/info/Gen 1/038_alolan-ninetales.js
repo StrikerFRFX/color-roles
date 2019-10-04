@@ -1,6 +1,6 @@
 exports.info = {
     'number': 38,
-    'species': '**Alolan Nintetales** (**アローラキュウコン** *Alola Kyuukon*)',
+    'species': '**Alolan Nintetales** (**アローラ・キュウコン** *Alola Kyuukon*)',
     'types': 'Ice | Fairy',
     'pokedexEntry': 'The reason it guides people all the way down to the mountain\'s base is that it wants them to hurry up and leave. Some said that deities visited mountains where Ninetales live, so in times long past, no one was allowed to go into those mountains.\n\n*Dex entry from USUM*',
     'genderRatio': { M: 0.75, F: 0.25 },

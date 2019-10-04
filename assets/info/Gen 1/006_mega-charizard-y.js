@@ -1,6 +1,6 @@
 exports.info = {
     'number': 6,
-    'species': '**Mega Charizard Y** (**メガリザードンY** *Mega Rizaadon*)',
+    'species': '**Mega Charizard Y** (**メガ・リザードンY** *Mega Rizaadon Y*)',
     'types' : 'Fire | Flying',
     'pokedexEntry': 'Its bond with its Trainer is the source of its power. It boasts speed and maneuverability greater than that of a jet fighter.\n\n*Dex entry from LGP/LGE*',
     'genderRatio': { M: 0.875, F: 0.125 },
