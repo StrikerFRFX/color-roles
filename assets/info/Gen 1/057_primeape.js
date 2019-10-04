@@ -1,0 +1,23 @@
+exports.info = {
+    'number': 57,
+    'species': '**Primeape** (**オコリザル** *Okorizaru*)',
+    'types': 'Fighting',
+    'pokedexEntry': 'When Primeape becomes furious, its blood circulation is boosted. In turn, its muscles are made even stronger. However, it also becomes much less intelligent at the same time.\n\n*Dex entry from ORAS*',
+    'genderRatio': { M: 0.5, F: 0.5 },
+    'catchRate': { integer: 75, percentage: '17.5%' },
+    'baseStats': { hp: 65, atk: 105, def: 60, spAtk: 60, spDef: 70, spd: 95 },
+    'abilities': { 0: 'Vital Spirit *OR* Anger Point', 'H': 'Defiant' },
+    'height': 1.0,
+    'weight': 70.5,
+    'colorHex': '#FFF1E2',
+    'colorHexShiny': '#FFDFB9',
+    'color': 'Very Pale Orange',
+    'colorShiny': 'Very Light Orange',
+    'evolvesFrom': { species: 'Mankey', level: '28', triggeredBy: 'Levelling Up' },
+    'eggGroups': ['Field'],
+    'hatchTime': '5140 - 5396 steps',
+    'gif': 'http://play.pokemonshowdown.com/sprites/xyani/primeape.gif',
+    'gifShiny': 'http://play.pokemonshowdown.com/sprites/xyani-shiny/primeape.gif',
+    'legendary': false,
+    'mythical': false
+};
