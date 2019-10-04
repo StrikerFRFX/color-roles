@@ -1,0 +1,23 @@
+exports.info = {
+    'number': 56,
+    'species': '**Mankey** (**マンキー** *Manki*)',
+    'types': 'Fighting',
+    'pokedexEntry': 'When Mankey starts shaking and its nasal breathing turns rough, it\'s a sure sign that it is becoming angry. However, because it goes into a towering rage almost instantly, it is impossible for anyone to flee its wrath.\n\n*Dex entry from ORAS*',
+    'genderRatio': { M: 0.5, F: 0.5 },
+    'catchRate': { integer: 190, percentage: '35.2%' },
+    'baseStats': { hp: 40, atk: 80, def: 35, spAtk: 35, spDef: 45, spd: 70 },
+    'abilities': { 0: 'Vital Spirit *OR* Anger Point', 'H': 'Defiant' },
+    'height': 0.5,
+    'weight': 61.7,
+    'colorHex': '#FFEEDE',
+    'colorHexShiny': '#DAF7C1',
+    'color': 'Very Pale Orange',
+    'colorShiny': 'Very Soft Green',
+    'evolvesTo': { species: 'Primeape', level: '28', triggeredBy: 'Levelling Up' },
+    'eggGroups': ['Field'],
+    'hatchTime': '5140 - 5396 steps',
+    'gif': 'http://play.pokemonshowdown.com/sprites/xyani/mankey.gif',
+    'gifShiny': 'http://play.pokemonshowdown.com/sprites/xyani-shiny/mankey.gif',
+    'legendary': false,
+    'mythical': false
+};
