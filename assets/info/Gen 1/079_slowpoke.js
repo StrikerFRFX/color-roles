@@ -1,0 +1,23 @@
+exports.info = {
+    'number': 79,
+    'species': '**Slowpoke** (**ヤドン** *Yadon*)',
+    'types': 'Water | Psychic',
+    'pokedexEntry': 'Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it\'s doing and often spends entire days just loafing at water\'s edge.\n\n*Dex entry from ORAS*',
+    'genderRatio': { M: 0.5, F: 0.5 },
+    'catchRate': { integer: 190, percentage: '35.2%' },
+    'baseStats': { hp: 90, atk: 65, def: 65, spAtk: 40, spDef: 40, spd: 15 },
+    'abilities': { 0: 'Oblivious *OR* Own Tempo', 'H': 'Regenerator' },
+    'height': 1.2,
+    'weight': 79.4,
+    'colorHex': '#F1B7C4',
+    'colorHexShiny': '#F2DAE2',
+    'color': 'Very Soft Red',
+    'colorShiny': 'Light Grayish Pink',
+    'evolvesTo': { species: 'Slowbro', level: '37', triggeredBy: 'Levelling Up' },
+    'eggGroups': ['Monster', 'Water 1'],
+    'hatchTime': '5140 - 5396 steps',
+    'gif': 'http://play.pokemonshowdown.com/sprites/xyani/slowpoke.gif',
+    'gifShiny': 'http://play.pokemonshowdown.com/sprites/xyani-shiny/slowpoke.gif',
+    'legendary': false,
+    'mythical': false
+};
