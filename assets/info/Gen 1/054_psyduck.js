@@ -1,0 +1,23 @@
+exports.info = {
+    'number': 54,
+    'species': '**Psyduck** (**コダック** *Kodakku*)',
+    'types': 'Water',
+    'pokedexEntry': 'Using psychokinesis gives it a headache, so it normally passes the time spacing out and doing as little as possible. It has been found that its brain cells are 10 times more active when Psyduck is experiencing a headache.\n\n*Dex entry from USUM*',
+    'genderRatio': { M: 0.5, F: 0.5 },
+    'catchRate': { integer: 190, percentage: '35.2%' },
+    'baseStats': { hp: 50, atk: 52, def: 48, spAtk: 65, spDef: 50, spd: 55 },
+    'abilities': { 0: 'Damp *OR* Cloud Nine', 'H': 'Swift Swim' },
+    'height': 0.8,
+    'weight': 43.2,
+    'colorHex': '#FFDF86',
+    'colorHexShiny': '#A4F3F4',
+    'color': 'Very Light Orange',
+    'colorShiny': 'Very Soft Cyan',
+    'evolvesTo': { species: 'Golduck', level: '33', triggeredBy: 'Levelling Up' },
+    'eggGroups': ['Water 1', 'Field'],
+    'hatchTime': '5140 - 5396 steps',
+    'gif': 'http://play.pokemonshowdown.com/sprites/xyani/psyduck.gif',
+    'gifShiny': 'http://play.pokemonshowdown.com/sprites/xyani-shiny/psyduck.gif',
+    'legendary': false,
+    'mythical': false
+};
