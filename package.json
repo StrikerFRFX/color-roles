@@ -1,7 +1,7 @@
 {
-  "name": "pokehub",
+  "name": "color-roles",
   "version": "1.0.0",
-  "description": "Your go to for everything Pokemon related!",
+  "description": "Rainbow go brrr",
   "main": "main.js",
   "scripts": {
     "test": "eslint ./",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Strikerrr/PokeHub.git"
+    "url": "git+https://github.com/Strikerrr/color-roles.git"
   },
   "author": "Striker <zzstrikerzzyt@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Strikerrr/PokeHub/issues"
+    "url": "https://github.com/Strikerrr/color-roles/issues"
   },
-  "homepage": "https://github.com/Strikerrr/PokeHub#readme",
+  "homepage": "https://github.com/Strikerrr/color-roles#readme",
   "dependencies": {
     "discord-akairo": "github:discord-akairo/discord-akairo",
     "discord.js": "github:discordjs/discord.js",
