@@ -61,7 +61,7 @@ class ColorRequestCommand extends Command {
                     color: `${args.hex}`
                 }
             });
-            role.setPosition((msg.member.roles.highest.position) + 2);
+            role.setPosition((msg.member.roles.highest.position) + 1);
 
             // Role addition
             const additionPromise = await msg.member.roles.add(role);
