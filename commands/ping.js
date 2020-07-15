@@ -30,7 +30,7 @@ class PingCommand extends Command {
 
         msg.content == '.ping' ? pingEmbed.addField(`P${Os}ng!`, `${ping} ms`) : pingEmbed.addField(`P${Is}ng!`, `${ping} ms`);
         console.log(`Pinged by ${msg.author.tag}`);
-        return message.edit({
+        return message.edit('', {
             embed: pingEmbed,
         });
     }
