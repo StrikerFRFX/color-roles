@@ -16,11 +16,11 @@ class SeeColorCommand extends Command {
     }
 
     async exec(msg) {
-        if (!msg.mentions.users == false) {
+        if (msg.mentions.users.first()) {
             const message = await msg.reply('I have sent you their color!');
             msg.member.user.send(`**${msg.mentions.users.first().username}**'s current role color is **${msg.mentions.members.first().roles.highest.hexColor}**.\nIf you wish to find your own, just run the command by itself (.sc)`);
             return;
-        } else {
+        } else if (!msg.mentions.users.first()) {
             const message = await msg.reply('I have sent you your color!');
             msg.member.user.send(`Your current role color is **${msg.member.roles.highest.hexColor}**\nIf you wish to find someone else's color, mention them with the command (.sc @user)`);
             return;

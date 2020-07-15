@@ -37,7 +37,7 @@ class ColorRequestCommand extends Command {
             return;
         }
         // Safeguard for if person already has a color role. Will update role name if their username is different.
-        if (msg.member.roles.highest.name.substring(6) != msg.author.username.toLowerCase() && msg.member.roles.highest.name != '@everyone' && msg.member.roles.highest.name != 'c sisters') {
+        if (msg.member.roles.highest.name.substring(6) != msg.author.username.toLowerCase() && msg.member.roles.highest.name != '@everyone' && msg.member.roles.highest.name != 'c sisters' && msg.member.roles.highest.name != 'OGs') {
             msg.member.roles.highest.edit({ name: `color ${msg.author.username.toLowerCase()}` });
 
             const errorMessage = await msg.reply('You already have a color role and cannot request another.\nI have updated your role name as your username did not match with the role.');
