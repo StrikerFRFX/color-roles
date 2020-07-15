@@ -11,7 +11,7 @@ class ReadyListener extends Listener {
     exec() {
         const guilds = this.client.guilds.size;
 
-        this.client.user.setActivity('with Rainbows', {
+        this.client.user.setActivity('with rainbows', {
             type: 'PLAYING',
         });
 

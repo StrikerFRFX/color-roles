@@ -66,7 +66,6 @@ class ColorRequestCommand extends Command {
             // Role addition
             const additionPromise = await msg.member.roles.add(role);
             const successMessage = await msg.reply(`I have successfully given you a role with the color **${args.hex}**`);
-            msg.delete();
             await sleep(10000);
             successMessage.delete();
             msg.delete();
