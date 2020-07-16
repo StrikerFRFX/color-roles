@@ -9,11 +9,10 @@ class EvalCommand extends Command {
             ownerOnly: true,
             quoted: false,
             args: [
-                {
-                    id: 'code',
-                    match: 'content'
-                }
-            ]
+            {
+                id: 'code',
+                match: 'content'
+            }]
         });
     }
 
