@@ -23,7 +23,7 @@ class ColorChangeCommand extends Command {
 
     async exec(msg, args) {
         if (msg.member.roles.highest.name.includes('color') == false) {
-          const errorMessage = await msg.reply('You do not have a color role.\nPlease run **.cr #hexcode** or **.colorRequest #hexcode** replacing hexcode with a valid hex code to get one (make sure to include the #).');
+            const errorMessage = await msg.reply('You do not have a color role.\nPlease run **.cr #hexcode** or **.colorRequest #hexcode** replacing hexcode with a valid hex code to get one (make sure to include the #).');
             await sleep(10000);
             errorMessage.delete();
             msg.delete();
@@ -31,13 +31,6 @@ class ColorChangeCommand extends Command {
         }
         if (!args.hex) {
             const errorMessage = await msg.reply('Please rerun the command with a valid hex code.');
-            await sleep(10000);
-            errorMessage.delete();
-            msg.delete();
-            return;
-        }
-        if (!args.hex.toString().includes('#')) {
-            const errorMessage = await msg.reply('Your message does not fit the format.\nPlease rerun the command with a "#" at the beginning of the Hex Code.');
             await sleep(10000);
             errorMessage.delete();
             msg.delete();
