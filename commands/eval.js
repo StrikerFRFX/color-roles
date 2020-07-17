@@ -1,6 +1,11 @@
 const { Command } = require('discord-akairo');
 const util = require('util');
 
+function _eval(code, msg) {
+    // eslint-disable-next-line no-eval
+    return eval(code);
+}
+
 class EvalCommand extends Command {
     constructor() {
         super('eval', {
@@ -54,7 +59,7 @@ class EvalCommand extends Command {
 
         try {
             const msg = message;
-            let output = eval(code);
+            let output = _eval(code, msg);
             if (output && typeof output.then === 'function') output = await output;
 
             if (typeof output !== 'string') output = util.inspect(output, { depth: 0 });
