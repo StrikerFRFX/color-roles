@@ -23,7 +23,7 @@ class ColorRequestCommand extends Command {
 
     async exec(msg, args) {
         if (msg.member.roles.highest.name.includes('color') == true) {
-            const errorMessage = await msg.reply('You already have a color role and cannot request another.');
+            const errorMessage = await msg.reply('You already have a color role and cannot request another.\nIf you want to change your color, do .cc #hexcode instead.');
             await sleep(10000);
             errorMessage.delete();
             msg.delete();
