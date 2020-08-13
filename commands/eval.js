@@ -58,6 +58,7 @@ class EvalCommand extends Command {
         };
 
         try {
+            let sent = null;
             const msg = message;
             let output = _eval(code, msg);
             if (output && typeof output.then === 'function') output = await output;
@@ -68,14 +69,19 @@ class EvalCommand extends Command {
 
             if (output.length + code.length > 1900) output = 'Output too long.';
 
-            const sent = await message.util.send([
-                `📥\u2000**Input**${cb}js`,
-                code,
-                cb,
-                `📤\u2000**Output**${cb}js`,
-                output,
-                cb
-            ]);
+            if (message.content.includes('//no-output') == false) {
+                sent = await message.util.send([
+                    `📥\u2000**Input**${cb}js`,
+                    code,
+                    cb,
+                    `📤\u2000**Output**${cb}js`,
+                    output,
+                    cb
+                ]);
+            } else {
+                sent = null;
+            }
+
 
             evaled.message = sent;
             evaled.errored = false;
@@ -83,6 +89,7 @@ class EvalCommand extends Command {
 
             return sent;
         } catch (err) {
+            let sent = null;
             console.error(err); // eslint-disable-line no-console
             let error = err;
 
@@ -90,14 +97,18 @@ class EvalCommand extends Command {
             error = `${logs.join('\n')}\n${logs.length && error === 'undefined' ? '' : error}`;
             error = error.replace(tokenRegex, '[TOKEN]');
 
-            const sent = await message.util.send([
-                `📥\u2000**Input**${cb}js`,
-                code,
-                cb,
-                `☠\u2000**Error**${cb}js`,
-                error,
-                cb
-            ]);
+            if (message.content.includes('//no-output') == false) {
+                sent = await message.util.send([
+                    `📥\u2000**Input**${cb}js`,
+                    code,
+                    cb,
+                    `📤\u2000**Output**${cb}js`,
+                    error,
+                    cb
+                ]);
+            } else {
+                sent = null;
+            }
 
             evaled.message = sent;
             evaled.errored = true;
