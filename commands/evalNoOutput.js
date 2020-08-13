@@ -6,10 +6,10 @@ function _eval(code, msg) {
     return eval(code);
 }
 
-class EvalCommand extends Command {
+class NoOutputEvalCommand extends Command {
     constructor() {
-        super('eval', {
-            aliases: ['eval', 'e'],
+        super('evalNoOutput', {
+            aliases: ['evalNoOutput', 'en'],
             category: 'owner',
             ownerOnly: true,
             quoted: false,
@@ -68,20 +68,10 @@ class EvalCommand extends Command {
 
             if (output.length + code.length > 1900) output = 'Output too long.';
 
-            const sent = await message.util.send([
-                `📥\u2000**Input**${cb}js`,
-                code,
-                cb,
-                `📤\u2000**Output**${cb}js`,
-                output,
-                cb
-            ]);
-
-            evaled.message = sent;
             evaled.errored = false;
             evaled.output = output;
 
-            return sent;
+            return;
         } catch (err) {
             console.error(err); // eslint-disable-line no-console
             let error = err;
@@ -90,22 +80,12 @@ class EvalCommand extends Command {
             error = `${logs.join('\n')}\n${logs.length && error === 'undefined' ? '' : error}`;
             error = error.replace(tokenRegex, '[TOKEN]');
 
-            const sent = await message.util.send([
-                `📥\u2000**Input**${cb}js`,
-                code,
-                cb,
-                `☠\u2000**Error**${cb}js`,
-                error,
-                cb
-            ]);
-
-            evaled.message = sent;
             evaled.errored = true;
             evaled.output = error;
 
-            return sent;
+            return;
         }
     }
 }
 
-module.exports = EvalCommand;
+module.exports = NoOutputEvalCommand;
