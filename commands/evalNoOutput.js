@@ -8,8 +8,8 @@ function _eval(code, msg) {
 
 class NoOutputEvalCommand extends Command {
     constructor() {
-        super('evalNoOutput', {
-            aliases: ['evalNoOutput', 'en'],
+        super('evall', {
+            aliases: ['evall', 'en'],
             category: 'owner',
             ownerOnly: true,
             quoted: false,
@@ -70,8 +70,6 @@ class NoOutputEvalCommand extends Command {
 
             evaled.errored = false;
             evaled.output = output;
-
-            return;
         } catch (err) {
             console.error(err); // eslint-disable-line no-console
             let error = err;
@@ -82,8 +80,6 @@ class NoOutputEvalCommand extends Command {
 
             evaled.errored = true;
             evaled.output = error;
-
-            return;
         }
     }
 }
