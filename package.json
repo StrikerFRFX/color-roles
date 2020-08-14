@@ -5,7 +5,8 @@
     "main": "main.js",
     "scripts": {
         "test": "eslint ./",
-        "start": "node main.js"
+        "start": "pm2 start main.js && pm2 logs all",
+        "preinstall": "npm i -g pm2 && pm2 install pm2-logrotate"
     },
     "repository": {
         "type": "git",
@@ -22,6 +23,7 @@
         "discord.js": "github:discordjs/discord.js",
         "eslint": "^6.3.0",
         "snekfetch": "^4.0.4",
-        "superagent": "^5.1.0"
+        "superagent": "^5.1.0",
+        "pm2": "^4.4.0"
     }
 }
