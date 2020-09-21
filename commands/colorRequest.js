@@ -56,6 +56,7 @@ class ColorRequestCommand extends Command {
 
                             // Role addition
                             addRole(msg, role, args);
+                            return;
                         }
                     }
                 })
