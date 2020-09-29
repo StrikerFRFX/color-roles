@@ -16,13 +16,24 @@ class SeeColorCommand extends Command {
     }
 
     async exec(msg) {
+        let colorMessage = '';
         if (msg.mentions.users.first()) {
+            let colorMessage = `**${msg.mentions.users.first().username}**'s current role color is **${msg.mentions.members.first().roles.highest.hexColor}**.`
             const message = await msg.reply('I have sent you their color!');
-            msg.member.user.send(`**${msg.mentions.users.first().username}**'s current role color is **${msg.mentions.members.first().roles.highest.hexColor}**.\nIf you wish to find your own, just run the command by itself (.sc)`);
+            msg.member.user.send(colorMessage);
+               .catch((e) => {
+                   msg.reply('Unable to DM. I have sent the message here.')
+                   msg.reply(colorMessage)
+               });
             return;
         } else if (!msg.mentions.users.first()) {
+            let colorMessage = `Your current role color is **${msg.member.roles.highest.hexColor}**`
             const message = await msg.reply('I have sent you your color!');
-            msg.member.user.send(`Your current role color is **${msg.member.roles.highest.hexColor}**\nIf you wish to find someone else's color, mention them with the command (.sc @user)`);
+            msg.member.user.send(colorMessage)
+               .catch((e) => {
+                   msg.reply('Unable to DM. I have sent the message here.')
+                   msg.reply(colorMessage)
+               });
             return;
         }
     }
