@@ -20,7 +20,7 @@ class SeeColorCommand extends Command {
         if (msg.mentions.users.first()) {
             let colorMessage = `**${msg.mentions.users.first().username}**'s current role color is **${msg.mentions.members.first().roles.highest.hexColor}**.`
             const message = await msg.reply('I have sent you their color!');
-            msg.member.user.send(colorMessage);
+            msg.member.user.send(colorMessage)
                .catch((e) => {
                    msg.reply('Unable to DM. I have sent the message here.')
                    msg.reply(colorMessage)
