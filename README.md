@@ -32,7 +32,7 @@ It's rather simple really.
 # Commands (and how to use, with pictures!)
 Note: with all commands, replace the <> and contents inside of that (e.g **.colorRequest #ff00ff** ). Also, each command has an available alias as well to be used.
 
-## .colorRequest ***<hex code>*** OR .cr ***<hex code>***
+## .colorRequest ***hexcode*** OR .cr ***hexcode***
 This is a one time use only command, you usually use it when you don't have a role with "color" and your username already. If you do have one and a booster role has gone above it, run **[.boostRoleReplace](.boostRoleReplace)** which you should have been prompted to in DMs (unless turned off).
 
 > ![success](https://i.imgur.com/TBPtKew.png)
@@ -47,7 +47,7 @@ This is a one time use only command, you usually use it when you don't have a ro
 
 > You can't be greedy either.
 
-## .colorChange ***<hex code>*** OR .cr ***<hex code>***
+## .colorChange ***hexcode*** OR .cr ***hexcode***
 This command can be run whenever you want, unlike the command above. However, it requires you to already have a Color Role (hence why running the above command is a prerequisite to it and the bot will error if you do not have a Color Role, as shown below). 
 
 > ![success](https://i.imgur.com/noPeCuG.png)
@@ -57,7 +57,7 @@ This command can be run whenever you want, unlike the command above. However, it
 
 > You already know you need a hex code to run these, so...
 
-## .seeColor ***<@optional mention>*** OR .sc ***<@optional mention>***
+## .seeColor ***@optional mention*** OR .sc ***@optional mention***
 This command is one of my personal favourites. It allows you to see your own Color (directly saved to your DMs if you have them turned on, if not sent to the channel you used the command in for 15 seconds so you can screenshot or copy paste directly) or see another user's color (you can become matching with people!). The command works as such: 
 - Use **.sc** by itself to receive your color (or mention yourself if you want)
 - Use **.sc @mention** to receive someone else's color. Usernames do not work.
@@ -67,7 +67,7 @@ This command is one of my personal favourites. It allows you to see your own Col
 
 > Listen... there was nobody else in the test server okay?!
 
-## .previewColor ***<hex code>*** or .pc ***<hex code>***
+## .previewColor ***hexcode*** or .pc ***hexcode***
 This one is a good one because it allows you to preview colors for 15 seconds before deleting them. Essentially, you run the command just as if you were to request or change a color and it will give you a "preview" role then delete it (as shown below) after 15 seconds. This gives you enough time to send a message and see what it looks like and if you like this color (can be helpful for color coordinated your profile pic and color)
 > ![previewcolor]()
 
