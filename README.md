@@ -25,6 +25,7 @@ It's rather simple really.
 
 
 > ![hexcode](https://i.imgur.com/NagTN1M.png)
+
 > It's rather simple, really.
 > \- Striker, 2020
 
@@ -35,19 +36,24 @@ Note: with all commands, replace the <> and contents inside of that (e.g **.colo
 This is a one time use only command, you usually use it when you don't have a role with "color" and your username already. If you do have one and a booster role has gone above it, run **[.boostRoleReplace](.boostRoleReplace)** which you should have been prompted to in DMs (unless turned off).
 
 > ![success](https://i.imgur.com/TBPtKew.png)
+
 > If you do it right, you get this.
 
 > ![nohex](https://i.imgur.com/assf0r3.png)
+
 > It doesn't like no hex codes.
 
 > ![greedy](https://i.imgur.com/O8Tm6uT.png)
+
 > You can't be greedy either.
 
 ## .colorChange ***<hex code>*** OR .cr ***<hex code>***
 This command can be run whenever you want, unlike the command above. However, it requires you to already have a Color Role (hence why running the above command is a prerequisite to it and the bot will error if you do not have a Color Role, as shown below). 
 
 > ![success](https://i.imgur.com/noPeCuG.png)
+
 > Yes, that's a darker shade of the same pink. Shut it.
+
 
 > You already know you need a hex code to run these, so...
 
@@ -58,6 +64,7 @@ This command is one of my personal favourites. It allows you to see your own Col
 
 > ![yours](https://i.imgur.com/IgHCfr3.png)
 > ![other](https://i.imgur.com/5O9G6gN.png)
+
 > Listen... there was nobody else in the test server okay?!
 
 ## .previewColor ***<hex code>*** or .pc ***<hex code>***
