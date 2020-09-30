@@ -11,7 +11,6 @@ class PreviewColorCommand extends Command {
         super('previewColor', {
             category: 'general',
             aliases: ['previewColor', 'pc'],
-            typing: true,
             args: [
             {
                 id: 'hex',
@@ -35,7 +34,7 @@ class PreviewColorCommand extends Command {
         });
         role.setPosition((msg.member.roles.highest.position));
         await msg.member.roles.add(role);
-        const successMessage = await msg.reply(previewEmbed);
+        const successMessage = await msg.channel.send(previewEmbed);
         await sleep(15000);
         successMessage.delete();
         msg.delete();

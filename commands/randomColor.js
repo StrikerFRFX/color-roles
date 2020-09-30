@@ -10,8 +10,7 @@ class RandomColorCommand extends Command {
     constructor() {
         super('randomColor', {
             category: 'general',
-            aliases: ['randomColor', 'rc'],
-            typing: true,
+            aliases: ['randomColor', 'rc']
         });
     }
 

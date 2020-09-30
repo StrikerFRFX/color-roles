@@ -1,4 +1,5 @@
 const { Command } = require('discord-akairo');
+const { embedError, embedSuccess } = require('../src/functions');
 
 function sleep(ms) {
     return new Promise((resolve) => {
@@ -11,7 +12,6 @@ class ColorRequestCommand extends Command {
         super('colorRequest', {
             category: 'general',
             aliases: ['colorRequest', 'cr'],
-            typing: true,
             args: [
             {
                 id: 'hex',
@@ -23,14 +23,14 @@ class ColorRequestCommand extends Command {
 
     async exec(msg, args) {
         if (msg.member.roles.highest.name.includes('color') == true) {
-            const errorMessage = await msg.reply('You already have a color role and cannot request another.\nIf you want to change your color, do .cc #hexcode instead.');
+            const errorMessage = await embedError(this.client, msg, msg.channel, 'You already have a color role and cannot request another.\nIf you want to change your color, do .cc #hexcode instead.');
             await sleep(10000);
             errorMessage.delete();
             msg.delete();
             return;
         }
         if (!args.hex) {
-            const errorMessage = msg.reply('Please rerun the command with a valid hex code.');
+            const errorMessage = embedError(this.client, msg, msg.channel, 'Please rerun the command with a valid hex code.');
             await sleep(10000);
             errorMessage.delete();
             msg.delete();
@@ -47,7 +47,7 @@ class ColorRequestCommand extends Command {
 
             // Role addition
             await msg.member.roles.add(role);
-            const successMessage = await msg.reply(`I have successfully given you a role with the color **${args.hex}**`);
+            const successMessage = await embedSuccess(this.client, msg, msg.channel, `I have successfully given you a role with the color **${args.hex}**`);
             await sleep(10000);
             successMessage.delete();
             msg.delete();

@@ -1,6 +1,8 @@
 const { Listener } = require('discord-akairo');
+const { embedNotify } = require('../src/functions');
+const { boostNotifyText } = require('../src/constants');
 
-class memberUpdate extends Listener {
+class GuildMemberUpdateListener extends Listener {
     constructor() {
         super('guildMemberUpdate', {
             emitter: 'client',
@@ -9,10 +11,11 @@ class memberUpdate extends Listener {
     }
 
     exec(oldMember, newMember) {
-        if (oldMember.premiumSinceTimestamp != newMember.premiumSinceTimestamp && oldMember.roles.highest.name.includes('color') == true) {
-            newMember.send('You have boosted a server which your highest role is your Color Role. If you wish to change this, please run the command ".br" in this server to replace your new Booster role with your Color Role.');
+
+        if (oldMember.premiumSinceTimestamp != newMember.premiumSinceTimestamp && oldMember.roles.highest.name.includes('color') == true && newMember.roles.highest.name.includes('color') == false && oldMember.user.bot == false) {
+            embedNotify(this.client, null, newMember.user, boostNotifyText);
         }
     }
 }
 
-module.exports = memberUpdate;
+module.exports = GuildMemberUpdateListener;
