@@ -27,7 +27,7 @@ class SeeColorCommand extends Command {
             msg.member.user.send(colorEmbed)
                 .then(async (m) => {
                     const successMessage = await embedSuccess(this.client, msg, msg.channel, 'I have sent you their color!');
-                    await sleep(1000);
+                    await sleep(10000);
                     successMessage.delete();
                 })
                 .catch(async (e) => {
@@ -53,7 +53,7 @@ class SeeColorCommand extends Command {
                     successMessage.delete();
                 })
                 .catch(async (e) => {
-                    await embedError(this.client, msg, msg.channel, 'Unable to DM. I have sent the message here.');
+                    await embedError(this.client, msg, msg.channel, 'Unable to DM.\nI will send the message here in a few seconds.');
                     await sleep(10000);
                     const colorMessage = await msg.channel.send(`<@${msg.author.id}>`, colorEmbed);
                     await sleep(10000);
