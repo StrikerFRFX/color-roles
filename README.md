@@ -86,6 +86,8 @@ This one is a good one because it allows you to preview colors for 15 seconds be
 
 > ![previewrole](https://i.imgur.com/aw3gE8s.png)
 
+> You can experiment with different colors and still keep your current one in case you don't like them!
+
 ## .randomColor
 This one is simple. Rolls a complete random hex code (it can sometimes get similar results so may need several rolls) and keeps it up for 15 seconds so if you like it, you can copy it.
 
