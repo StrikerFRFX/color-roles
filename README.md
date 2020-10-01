@@ -8,10 +8,10 @@
 - [About Color Roles](#about-color-roles)
 - [How To Find a Hex Code Easily, with pictures](#how-to-find-a-hex-code-easily--with-pictures)
 - [Commands (and how to use, with pictures!)](#commands--and-how-to-use--with-pictures--)
-  * [.colorRequest // .cr](#colorrequest----hexcode----or-cr----hexcode---)
+  * [.colorRequest // .cr](#colorchange-hexcode-or-cr-hexcode)
   * [.colorChange // .cc](#colorchange----hexcode----or-cr----hexcode---)
-  * [.seeColor // .sc](#seecolor-----optional-mention----or-sc-----optional-mention---)
-  * [.previewColor](#previewcolor----hexcode----or-pc----hexcode---)
+  * [.seeColor // .sc](#seecolor-optional-mention-or-sc-optional-mention)
+  * [.previewColor](#seecolor-optional-mention-or-sc-optional-mention)
   * [.randomColor](#randomcolor)
 - [Libraries Used](#libraries-used)
 - [Credits](#credits)
@@ -82,7 +82,8 @@ This command is one of my personal favourites. It allows you to see your own Col
 
 ## .previewColor ***hexcode*** or .pc ***hexcode***
 This one is a good one because it allows you to preview colors for 15 seconds before deleting them. Essentially, you run the command just as if you were to request or change a color and it will give you a "preview" role then delete it (as shown below) after 15 seconds. This gives you enough time to send a message and see what it looks like and if you like this color (can be helpful for color coordinated your profile pic and color)
-> ![previewcolor]()
+> ![previewcolor](https://i.imgur.com/ESW0oZ2.png)
+> ![previewrole](https://i.imgur.com/aw3gE8s.png)
 
 ## .randomColor
 This one is simple. Rolls a complete random hex code (it can sometimes get similar results so may need several rolls) and keeps it up for 15 seconds so if you like it, you can copy it.
