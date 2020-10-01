@@ -83,13 +83,16 @@ This command is one of my personal favourites. It allows you to see your own Col
 ## .previewColor ***hexcode*** or .pc ***hexcode***
 This one is a good one because it allows you to preview colors for 15 seconds before deleting them. Essentially, you run the command just as if you were to request or change a color and it will give you a "preview" role then delete it (as shown below) after 15 seconds. This gives you enough time to send a message and see what it looks like and if you like this color (can be helpful for color coordinated your profile pic and color)
 > ![previewcolor](https://i.imgur.com/ESW0oZ2.png)
+
 > ![previewrole](https://i.imgur.com/aw3gE8s.png)
 
 ## .randomColor
 This one is simple. Rolls a complete random hex code (it can sometimes get similar results so may need several rolls) and keeps it up for 15 seconds so if you like it, you can copy it.
 
 > ![randomone](https://i.imgur.com/VE59SnW.png)
+
 > ![randomtwo](https://i.imgur.com/9laoPu5.png)
+
 > ![randomthree](https://i.imgur.com/Bd33xGM.png)
 
 > It usually generates random colors that are different but sometimes they look similar due to the randomiser algorithm.
