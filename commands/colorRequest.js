@@ -30,7 +30,7 @@ class ColorRequestCommand extends Command {
             return;
         }
         if (!args.hex) {
-            const errorMessage = embedError(this.client, msg, msg.channel, 'Please rerun the command with a valid hex code.');
+            const errorMessage = await embedError(this.client, msg, msg.channel, 'Please rerun the command with a valid hex code.');
             await sleep(10000);
             errorMessage.delete();
             msg.delete();
