@@ -16,7 +16,7 @@ class HelpCommand extends Command {
     }
 
     async exec(msg) {
-        const helpEmbed = this.client.embed()
+        const helpEmbed = this.client.util.embed()
             .setTimestamp()
             .setTitle(`Server: ${msg.guild.name}`)
             .setDescription('All commands in this server start with `.`')
