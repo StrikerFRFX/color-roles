@@ -11,8 +11,8 @@ class ReadyListener extends Listener {
     exec() {
         const guilds = this.client.guilds.size;
 
-        this.client.user.setActivity('with rainbows', {
-            type: 'PLAYING',
+        this.client.user.setActivity('for .help || Playing with rainbows!', {
+            type: 'WATCHING',
         });
 
         console.log(`${this.client.user.username} is connected to the Discord WebSocket`);
