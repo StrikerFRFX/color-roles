@@ -22,7 +22,22 @@ class ColorChangeCommand extends Command {
     }
 
     async exec(msg, args) {
-        if (msg.member.roles.highest.name.includes('color') == false) {
+        if (msg.member.premiumSinceTimestamp > 0 || msg.member.roles.highest.name.toLowerCase().includes('boost')) {
+            const colorRole = msg.member.roles.cache.filter(r => r.name.includes('color')).first();
+            if (colorRole == undefined) {
+                const errorMessage = await embedError(this.client, msg, msg.channel, 'You do not have a color role.\n\nPlease run **.cr #hexcode** or **.colorRequest #hexcode** replacing hexcode with a valid hex code to get one');
+                await sleep(10000);
+                errorMessage.delete();
+                msg.delete();
+                return;
+            } else {
+                const errorMessage = await embedError(this.client, msg, msg.channel, 'You cannot change your Color Role currently, please run ".br" by itself to replace your Nitro Booster role with your color role.');
+                await sleep(10000);
+                errorMessage.delete();
+                msg.delete();
+                return;
+            }
+        } else if (msg.member.roles.highest.name.includes('color') == false) {
             const errorMessage = await embedError(this.client, msg, msg.channel, 'You do not have a color role.\n\nPlease run **.cr #hexcode** or **.colorRequest #hexcode** replacing hexcode with a valid hex code to get one');
             await sleep(10000);
             errorMessage.delete();

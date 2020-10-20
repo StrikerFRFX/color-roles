@@ -11,8 +11,7 @@ class BoostReplaceCommand extends Command {
     constructor() {
         super('boostRoleReplace', {
             category: 'general',
-            aliases: ['boostRoleReplace', 'br'],
-            ownerOnly: true
+            aliases: ['boostRoleReplace', 'br']
         });
     }
 
@@ -22,8 +21,9 @@ class BoostReplaceCommand extends Command {
             await sleep(10000);
             errorMsg.delete();
         } else {
-            const role = msg.member.roles.cache.filter(r => r.name.includes('color')).first();
+            const role = msg.member.roles.cache.filter(r => r.name.toLowerCase().includes('color')).first();
             console.log(role);
+            console.log('test');
             await role.setPosition(msg.member.roles.highest.position);
             const successMsg = await embedSuccess(this.client, msg, msg.channel, 'Replaced your Booster Role successfully with your Color Role!');
             await sleep(10000);
