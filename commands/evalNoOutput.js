@@ -1,5 +1,6 @@
 const { Command } = require('discord-akairo');
 const util = require('util');
+const { logCommand } = require('../src/functions');
 
 function _eval(code, msg) {
     // eslint-disable-next-line no-eval
@@ -22,6 +23,7 @@ class NoOutputEvalCommand extends Command {
     }
 
     async exec(message, { code }) {
+        logCommand(this.client, message);
         if (!code) return message.util.reply('No code provided!');
 
         const evaled = {};

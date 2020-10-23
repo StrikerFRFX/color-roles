@@ -1,5 +1,5 @@
 const { Command } = require('discord-akairo');
-
+const { logCommand } = require('../src/functions');
 class PingCommand extends Command {
     constructor() {
         super('ping', {
@@ -9,6 +9,7 @@ class PingCommand extends Command {
     }
 
     async exec(msg) {
+        logCommand(this.client, msg);
         console.log('Pinging!');
         const startTime = Date.now(),
             message = msg.content == '.ping' ? await msg.channel.send('Ponging') : await msg.channel.send('Pinging'),

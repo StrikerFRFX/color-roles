@@ -1,4 +1,5 @@
 const { Command } = require('discord-akairo');
+const { logCommand } = require('../src/functions');
 
 function sleep(ms) {
     return new Promise((resolve) => {
@@ -15,6 +16,7 @@ class RandomColorCommand extends Command {
     }
 
     async exec(msg) {
+        logCommand(this.client, msg);
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
         const randomColorEmbed = this.client.util.embed()
             .setTimestamp()

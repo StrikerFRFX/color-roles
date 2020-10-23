@@ -1,4 +1,6 @@
-const { Command, SequelizeProvider } = require('discord-akairo');
+const { Command } = require('discord-akairo');
+const { logCommand } = require('../src/functions');
+
 function sleep(ms) {
     return new Promise((resolve) => {
         setTimeout(resolve, ms);
@@ -20,6 +22,7 @@ class RestartCommand extends Command {
     }
 
     async exec(msg, args) {
+        logCommand(this.client, msg);
         console.log('Restarting...');
         const restartMsg = await msg.channel.send('Restarting');
         await restartMsg.edit('RESTARTING [.]');

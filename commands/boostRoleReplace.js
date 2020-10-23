@@ -1,5 +1,5 @@
 const { Command } = require('discord-akairo');
-const { embedError, embedSuccess } = require('../src/functions');
+const { embedError, embedSuccess, logCommand } = require('../src/functions');
 
 function sleep(ms) {
     return new Promise((resolve) => {
@@ -16,6 +16,7 @@ class BoostReplaceCommand extends Command {
     }
 
     async exec(msg) {
+        logCommand(this.client, msg);
         if (msg.member.roles.highest.name.includes('color')) {
             const errorMsg = await embedError(this.client, msg, msg.channel, 'Your highest role is already your Color Role.');
             await sleep(10000);

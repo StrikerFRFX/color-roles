@@ -1,5 +1,5 @@
 const { Command } = require('discord-akairo');
-const { embedError, embedSuccess } = require('../src/functions');
+const { embedError, embedSuccess, logCommand } = require('../src/functions');
 
 function sleep(ms) {
     return new Promise((resolve) => {
@@ -22,6 +22,7 @@ class ColorRequestCommand extends Command {
     }
 
     async exec(msg, args) {
+        logCommand(this.client, msg);
         if (msg.member.roles.highest.name.includes('color') == true) {
             const errorMessage = await embedError(this.client, msg, msg.channel, 'You already have a color role and cannot request another.\nIf you want to change your color, do .cc #hexcode instead.');
             await sleep(10000);

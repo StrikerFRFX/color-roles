@@ -1,5 +1,5 @@
 const { Command } = require('discord-akairo');
-const { embedNotify, embedError, embedSuccess } = require('../src/functions');
+const { embedNotify, embedError, embedSuccess, logCommand } = require('../src/functions');
 
 function sleep(ms) {
     return new Promise((resolve) => {
@@ -16,6 +16,7 @@ class HelpCommand extends Command {
     }
 
     async exec(msg) {
+        logCommand(this.client, msg);
         const helpEmbed = this.client.util.embed()
             .setTimestamp()
             .setTitle(`Server: ${msg.guild.name}`)

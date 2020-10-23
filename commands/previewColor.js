@@ -1,4 +1,5 @@
 const { Command } = require('discord-akairo');
+const { logCommand } = require('../src/functions');
 
 function sleep(ms) {
     return new Promise((resolve) => {
@@ -21,6 +22,7 @@ class PreviewColorCommand extends Command {
     }
 
     async exec(msg, args) {
+        logCommand(this.client, msg);
         const previewEmbed = this.client.util.embed()
             .setTimestamp()
             .setTitle(`Preview: ${args.hex}`)

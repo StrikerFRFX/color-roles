@@ -1,5 +1,5 @@
 const { Command } = require('discord-akairo');
-const { embedError, embedSuccess } = require('../src/functions');
+const { embedError, embedSuccess, logCommand } = require('../src/functions');
 
 function sleep(ms) {
     return new Promise((resolve) => {
@@ -22,6 +22,7 @@ class ColorChangeCommand extends Command {
     }
 
     async exec(msg, args) {
+        logCommand(this.client, msg);
         if (msg.member.premiumSinceTimestamp > 0 || msg.member.roles.highest.name.toLowerCase().includes('boost')) {
             const colorRole = msg.member.roles.cache.filter(r => r.name.includes('color')).first();
             if (colorRole == undefined) {

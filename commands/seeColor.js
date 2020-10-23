@@ -1,5 +1,5 @@
 const { Command } = require('discord-akairo');
-const { embedError, embedNotify, embedSuccess } = require('../src/functions');
+const { embedError, embedNotify, embedSuccess, logCommand } = require('../src/functions');
 
 function sleep(ms) {
     return new Promise((resolve) => {
@@ -17,6 +17,7 @@ class SeeColorCommand extends Command {
 
     async exec(msg) {
         if (msg.mentions.users.first()) {
+            logCommand(this.client, msg);
             const colorEmbed = this.client.util.embed()
             .setTimestamp()
             .setThumbnail(msg.mentions.users.first().avatarURL())
