@@ -1,11 +1,13 @@
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
 const { Intents } = require('discord.js');
+const myIntents = new Intents();
+myIntents.add('DIRECT_MESSAGES', 'DIRECT_MESSAGE_TYPING', 'GUILDS', 'GUILD_EMOJIS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_TYPING', 'GUILD_PRESENCES');
 
 class Client extends AkairoClient {
     constructor() {
         super({
             ws: {
-                intents: Intents.ALL
+                intents: myIntents
             },
             ownerID: ['215509157837537280'],
             automateCategories: true
