@@ -23,7 +23,7 @@ class ColorChangeCommand extends Command {
 
     async exec(msg, args) {
         logCommand(this.client, msg);
-        if (msg.member.premiumSinceTimestamp > 0 || msg.member.roles.highest.name.toLowerCase().includes('boost')) {
+        if (msg.member.premiumSinceTimestamp > 0 & msg.member.roles.highest.name.toLowerCase().includes('boost')) {
             const colorRole = msg.member.roles.cache.filter(r => r.name.includes('color')).first();
             if (colorRole == undefined) {
                 const errorMessage = await embedError(this.client, msg, msg.channel, 'You do not have a color role.\n\nPlease run **.cr #hexcode** or **.colorRequest #hexcode** replacing hexcode with a valid hex code to get one');
