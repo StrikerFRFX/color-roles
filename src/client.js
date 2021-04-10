@@ -1,8 +1,12 @@
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
+const { Intents } = require('discord.js');
 
 class Client extends AkairoClient {
     constructor() {
         super({
+            ws: {
+                intents: Intents.ALL
+            },
             ownerID: ['215509157837537280'],
             automateCategories: true
         });
