@@ -6,9 +6,7 @@ myIntents.add('DIRECT_MESSAGES', 'DIRECT_MESSAGE_TYPING', 'GUILDS', 'GUILD_EMOJI
 class Client extends AkairoClient {
     constructor() {
         super({
-            ws: {
-                intents: myIntents
-            },
+            intents: myIntents,
             ownerID: ['215509157837537280'],
             automateCategories: true
         });
