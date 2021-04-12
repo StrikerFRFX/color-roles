@@ -18,10 +18,12 @@ class UptimeCommand extends Command {
         console.log(`Uptime Command Ran by ${msg.author.tag}`)
 
         const uptimeEmbed = this.client.util.embed()
+            .setTitle('==COLOR ROLES UPTIME==')
             .setTimestamp()
-            .setThumbnail(this.client.user.avatarURL());
+            .setThumbnail(this.client.user.avatarURL())
+            .setColor('#ffff00');
 
-        const uptime = moment.duration(this.client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
+        const uptime = moment.duration(this.client.uptime).format(" D [Days], H [Hours], m [Minutes], s [Seconds]");
 
         console.log(`Uptime: ${uptime}`);
         uptimeEmbed.setDescription(uptime)
