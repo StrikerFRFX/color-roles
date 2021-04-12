@@ -23,6 +23,8 @@
         "discord.js": "github:discordjs/discord.js",
         "dotenv": "^8.2.0",
         "eslint": "^6.3.0",
+        "moment": "^2.29.1",
+        "moment-duration-format": "^2.3.2",
         "pm2": "^4.4.0",
         "snekfetch": "^4.0.4",
         "superagent": "^5.1.0"
