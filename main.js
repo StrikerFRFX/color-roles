@@ -1,4 +1,5 @@
 const Client = require('./src/client.js');
+require('dotenv').config();
 
 const client = new Client();
 
