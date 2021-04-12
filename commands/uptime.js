@@ -15,16 +15,16 @@ class UptimeCommand extends Command {
 
     async exec(msg) {
         logCommand(this.client, msg);
-        console.log(`Uptime COmmand Ran by ${msg.author.tag}`)
+        console.log(`Uptime Command Ran by ${msg.author.tag}`)
 
         const uptimeEmbed = this.client.util.embed()
             .setTimestamp()
             .setThumbnail(this.client.user.avatarURL());
 
-        const uptime = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
+        const uptime = moment.duration(this.client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
 
         console.log(`Uptime: ${uptime}`);
-        pingEmbed.setDescription(uptime)
+        uptimeEmbed.setDescription(uptime)
         return message.edit('', {
             embed: uptimeEmbed,
         });
