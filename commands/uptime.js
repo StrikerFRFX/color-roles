@@ -25,7 +25,7 @@ class UptimeCommand extends Command {
 
         console.log(`Uptime: ${uptime}`);
         uptimeEmbed.setDescription(uptime)
-        return msg.edit('', {
+        return msg.channel.send('', {
             embed: uptimeEmbed,
         });
     }
