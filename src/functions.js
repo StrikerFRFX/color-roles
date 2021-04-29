@@ -47,7 +47,7 @@ const embedNotify = async (client, msg, sendTo, details) => {
 };
 
 const logCommand = (client, msg) => {
-    client.channels.fetch('768189873126637628').then((channel) => {
+    client.channels.fetch('837399605318516736').then((channel) => {
         const logEmbed = client.util.embed()
             .setAuthor(msg.author.tag)
             .setColor('#00ff00')
