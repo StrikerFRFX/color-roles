@@ -39,10 +39,8 @@ class ColorRequestCommand extends Command {
         } else {
             // Role Creation
             const role = await msg.guild.roles.create({
-                data: {
-                    name: `color ${msg.author.username.toLowerCase()}`,
-                    color: `${args.hex}`
-                }
+                name: `color ${msg.author.username.toLowerCase()}`,
+                color: `${args.hex}`
             });
             role.setPosition((msg.member.roles.highest.position));
 
