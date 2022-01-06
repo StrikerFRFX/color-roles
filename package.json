@@ -4,9 +4,10 @@
     "description": "Rainbow go brrr",
     "main": "main.js",
     "scripts": {
-        "test": "eslint ./",
-        "start": "pm2 start main.js && pm2 logs all",
-        "preinstall": "npm i -g pm2 && pm2 install pm2-logrotate"
+        "lint": "eslint ./",
+        "lint:ci": "eslint ./ --fix",
+        "start": "npm run preinstall && pm2 start main.js --name \"Color-Roles\" && pm2 logs all",
+        "preinstall": "npm i && npm i -g pm2 && pm2 install pm2-logrotate"
     },
     "repository": {
         "type": "git",
@@ -22,7 +23,7 @@
         "discord-akairo": "github:discord-akairo/discord-akairo",
         "discord.js": "github:discordjs/discord.js",
         "dotenv": "^8.2.0",
-        "eslint": "^6.3.0",
+        "eslint": "^8.6.0",
         "moment": "^2.29.1",
         "moment-duration-format": "^2.3.2",
         "pm2": "^4.4.0",
