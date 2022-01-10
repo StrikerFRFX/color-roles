@@ -1,21 +1,17 @@
 FROM node:latest
 
-RUN mkdir -p /usr/src/color-roles
-WORKDIR /usr/src/color-roles
-
-COPY package.json /usr/src/color-roles
+COPY package.json package.json
 RUN yarn
 
-COPY . /usr/src/color-roles
+COPY . .
 
 RUN yarn build
 
 FROM node:latest
 
-WORKDIR /usr/src/color-roles
-COPY package.json /usr/src/color-roles
+COPY package.json package.json
 RUN yarn
 
-ADD dist /usr/src/color-roles
+COPY --from=0 dist .
 
 CMD ["node", "index"]
