@@ -5,7 +5,7 @@
 	"repository": "https://github.com/strikerfrfx/color-roles",
 	"scripts": {
 		"start": "cd dist && node index",
-		"build": "rimraf dist && tsc && devScript --copyOnly && npm prune --production",
+		"build": "tsc && devScript --copyOnly && npm prune --production",
 		"dev": "devScript"
 	},
 	"license": "MPL-2.0",
