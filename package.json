@@ -1,32 +1,27 @@
 {
-    "name": "color-roles",
-    "version": "1.0.0",
-    "description": "Rainbow go brrr",
-    "main": "main.js",
-    "scripts": {
-        "test": "eslint ./",
-        "start": "pm2 start main.js && pm2 logs all",
-        "preinstall": "npm i -g pm2 && pm2 install pm2-logrotate"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Strikerrr/color-roles.git"
-    },
-    "author": "Striker <zzstrikerzzyt@gmail.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Strikerrr/color-roles/issues"
-    },
-    "homepage": "https://github.com/Strikerrr/color-roles#readme",
-    "dependencies": {
-        "discord-akairo": "github:discord-akairo/discord-akairo",
-        "discord.js": "github:discordjs/discord.js",
-        "dotenv": "^8.2.0",
-        "eslint": "^6.3.0",
-        "moment": "^2.29.1",
-        "moment-duration-format": "^2.3.2",
-        "pm2": "^4.4.0",
-        "snekfetch": "^4.0.4",
-        "superagent": "^5.1.0"
-    }
+	"name": "color-roles",
+	"version": "1.0.0",
+	"description": "Rainbow go brrr",
+	"repository": "https://github.com/strikerfrfx/color-roles",
+	"scripts": {
+		"start": "cd dist && node index",
+		"build": "rimraf dist && tsc && devScript --copyOnly && npm prune --production",
+		"dev": "devScript"
+	},
+	"license": "MPL-2.0",
+	"dependencies": {
+		"@types/debug": "^4.1.7",
+		"@typescript-eslint/eslint-plugin": "^5.9.0",
+		"@typescript-eslint/parser": "5.0.0",
+		"debug": "^4.3.3",
+		"discord.js": "13.5.0",
+		"dotenv": "^10.0.0",
+		"prettier": "^2.5.1",
+		"rimraf": "^3.0.2",
+		"source-map-support": "0.5.21",
+		"tsutils": "^3.21.0",
+		"typescript": "^4.5.4",
+		"ts-devscript": "3.0.6",
+		"@types/node": "^17.0.6"
+	}
 }
