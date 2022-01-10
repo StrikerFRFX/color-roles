@@ -1,5 +1,7 @@
 FROM node:latest
 
+WORKDIR /usr/color-roles
+
 COPY package.json package.json
 RUN yarn
 
