@@ -11,7 +11,7 @@ export default async function (int: CommandInteraction) {
 	if (codeToRun.includes("await ")) codeToRun = `(async () => {\n${codeToRun}\n})()`;
 
 	const { options } = getParsedCommandLineOfConfigFile(
-		"../tsconfig.json",
+		"tsconfig.json",
 		{},
 		{
 			...sys,
