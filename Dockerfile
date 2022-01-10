@@ -16,6 +16,6 @@ WORKDIR /usr/src/color-roles
 COPY package.json /usr/src/color-roles
 RUN yarn
 
-COPY --from=0 dist /usr/src/color-roles
+COPY --from=0 dist/* /usr/src/color-roles
 
 CMD ["node", "index"]
