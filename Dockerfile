@@ -14,6 +14,6 @@ FROM node:latest
 COPY package.json package.json
 RUN yarn
 
-COPY --from=0 dist .
+COPY dist .
 
 CMD ["node", "index"]
