@@ -1,8 +1,8 @@
-import { GuildMember } from "discord.js";
+import { DiscordEvent } from "discord-module-loader";
 import { mainLog } from "..";
 import EmbedCreator from "../util/classes/EmbedCreator";
 
-export default async function (oldMember: GuildMember, newMember: GuildMember) {
+export default new DiscordEvent("guildMemberUpdate", (oldMember, newMember) => {
 	const log = mainLog.extend("guildMemberUpdate");
 	log(`guildMemberUpdate event fired for GUILD ${newMember.guild.name} (${newMember.guild.name})`);
 	if (oldMember.roles.highest.name.includes("color") && !newMember.roles.highest.name.includes("color") && oldMember.user.bot == false) {
@@ -18,4 +18,4 @@ export default async function (oldMember: GuildMember, newMember: GuildMember) {
 		});
 		log(`Member ${newMember.user.tag} (${newMember.user.id}) notified by BOT.`);
 	}
-}
+});
